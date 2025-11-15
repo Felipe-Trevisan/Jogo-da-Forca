@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogo da Forca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="tela-inicial" class="tela ativa">
+    <h1>JOGO DA FORCA</h1>
+    <div class="menu-botoes">
+      <button id="btnStart">▶ INICIAR</button>
+      <button id="btnComo">? COMO JOGAR</button>
+    </div>
+  </div>
+
+  <div id="tela-jogo" class="tela">
+    <h1>JOGO DA FORCA</h1>
+    <div id="erros">0</div>
+    <div id="misterio"></div>
+    <div id="botoes">
+      <div id="qtop">
+        <button id="btn1">q</button><button id="btn2">w</button><button id="btn3">e</button><button id="btn4">r</button><button id="btn5">t</button><button id="btn6">y</button><button id="btn7">u</button><button id="btn8">i</button><button id="btn9">o</button><button id="btn10">p</button>
+      </div>
+      <div id="atol">
+        <button id="btn11">a</button><button id="btn12">s</button><button id="btn13">d</button><button id="btn14">f</button><button id="btn15">g</button><button id="btn16">h</button><button id="btn17">j</button><button id="btn18">k</button><button id="btn19">l</button>
+      </div>
+      <div id="çtom">
+        <button id="btn20">ç</button><button id="btn21">z</button><button id="btn22">x</button><button id="btn23">c</button><button id="btn24">v</button><button id="btn25">b</button><button id="btn26">n</button><button id="btn27">m</button>
+      </div>
+    </div>
+    <div id="controle-jogo"></div>
+  </div>
+
+  <div id="instrucoes" class="oculto">
+    <div class="caixa">
+      <h2>COMO JOGAR</h2>
+      <p>Uma palavra será sorteada aleatoriamente.<br>
+      Use os botões para adivinhar antes de cometer 10 erros.<br>
+      Ao vencer ou perder, clique em REINICIAR para jogar novamente.</p>
+      <button id="btnFechar">FECHAR</button>
+    </div>
+  </div>
+
+  <div id="popup-fim" class="oculto">
+    <div class="caixa">
+      <h2>VOCÊ PERDEU!</h2>
+      <p id="palavra-certa"></p>
+      <button id="btnFecharFim">FECHAR</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

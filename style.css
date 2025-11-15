@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f1724, #1b2b45);
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tela {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 40px;
+}
+
+.tela.ativa {
+  display: flex;
+}
+
+h1 {
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.menu-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-botoes button {
+  background: linear-gradient(180deg,#00bfff,#007acc);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 14px 32px;
+  min-width: 220px;
+  box-shadow: 0 6px 0 #003f63;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.menu-botoes button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 #003f63;
+}
+
+#erros {
+  background: #ff6347;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 0 18px rgba(255,99,71,0.5);
+}
+
+#misterio {
+  display: flex;
+  gap: 18px;
+  font-size: 38px;
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+#botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+#botoes div {
+  display: flex;
+  gap: 6px;
+}
+
+#botoes button {
+  background: linear-gradient(180deg,#00bfff,#1e90ff);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 18px;
+  box-shadow: 0 6px 0 #0072a6;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+#botoes button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0 #0072a6;
+}
+
+#botoes button:disabled {
+  background: #1e3a5f;
+  cursor: not-allowed;
+}
+
+#mensagem {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.ganhou {
+  background: #3cb371;
+  color: #fff;
+}
+
+.perdeu {
+  background: #b22222;
+  color: #fff;
+}
+
+#controle-jogo {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reiniciar {
+  background: linear-gradient(180deg,#ffd84a,#e6b800);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 12px 28px;
+  box-shadow: 0 6px 0 #b8860b;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.reiniciar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0 #b8860b;
+}
+
+.sair {
+  background: linear-gradient(180deg,#ff4b4b,#b22020);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 12px 28px;
+  box-shadow: 0 6px 0 #7a1010;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.sair:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0 #7a1010;
+}
+
+#instrucoes,
+#popup-fim {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 10, 20, 0.85);
+  z-index: 10;
+}
+
+#instrucoes.ativo,
+#popup-fim.ativo {
+  display: flex;
+}
+
+.caixa {
+  background: #16202b;
+  border: 3px solid #ffd700;
+  border-radius: 12px;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  color: #ffd700;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.caixa h2 {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.caixa p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.caixa button {
+  margin-top: 18px;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b8860b;
+}
+
+.caixa button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0 #b8860b;
+}
